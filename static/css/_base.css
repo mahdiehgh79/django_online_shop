@@ -5,7 +5,24 @@
 	src: url('../fonts/iransansx/woff/IRANSansX-Regular.woff') format('woff'),
 	url('../fonts/iransansx/woff2/IRANSansX-Regular.woff2') format('woff2');
 }
-
+@font-face{
+	font-family: Bbadr;
+	src:url(../fonts/BBADR.eot) format('eot'),
+		url(../fonts/BBADR.woff) format('woff'),
+		url(../fonts/BBADR.ttf) format('truetype');
+}
+@font-face{
+	font-family: Bkoodak;
+	src:url(../fonts/BKOODB.eot) format('eot'),
+		url(../fonts/BKOODB.woff) format('woff'),
+		url(../fonts/BKOODB.ttf) format('truetype');
+}
+@font-face{
+	font-family: Btitr;
+	src:url(../fonts/BTITRBD.eot) format('eot'),
+		url(../fonts/BTITRBD.woff) format('woff'),
+		url(../fonts/BTITRBD.ttf) format('truetype');
+}
 /* converting english numbers to persian numbers */
 .ss02 {
     -moz-font-feature-settings: "ss02";
@@ -16,4 +33,12 @@
 body {
     font-family: "IRANSansX", serif;
     text-align:right !important;
+	direction: rtl;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,7db9e8+100 */
+background: rgb(30,87,153); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
 }

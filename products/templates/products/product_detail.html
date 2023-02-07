@@ -45,14 +45,20 @@
                                 <div class="product-action d-flex align-items-sm-center align-content-center mb--30">
                                     <form action="{% url 'cart_add' product.id %}" method="post">
                                         {% csrf_token %}
-                                        {#                                        {{ add_to_cart_form|crispy }}#}
-                                        <div class="quantity">
-                                            <input type="number" class="quantity-input" name="quantity" id="qty" value="30"
-                                                   min="1">
+
+                                        <div class="quantity-wrapper d-flex justify-content-start">
+                                            <div class="quantity">
+                                                <input type="number" class="quantity-input" name="quantity" id="qty"
+                                                       value="30"
+                                                       min="1">
+                                            </div>
+                                            <button type="submit"
+                                                    class="btn btn-small btn-bg-red  btn-color-white btn-hover-2"
+                                            >
+                                                اضافه به سبد خرید
+                                            </button>
                                         </div>
-                                        <button class="btn"
-                                                type="submit">اضافه به سبد خرید
-                                        </button>
+
 
                                     </form>
                                     {#                                    <div class="quantity-wrapper d-flex justify-content-start">#}
@@ -222,33 +228,33 @@
         </div>
         <!-- Main Content Wrapper End -->
 
-        <!-- Footer Start-->
-        <footer class="footer">
-            <div class="footer-top bg-color ptb--50" data-bg-color="#f6f6f6">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-9 text-center">
-                            <div class="footer-widget mb--50">
-                                <div class="textwidget">
-                                    <img src="assets/img/codingyar_logo.png" alt="Logo">
-                                </div>
-                            </div>
-                            <div class="footer-widget mb--50 pb--1">
-                                <ul class="footer-menu">
-                                    <li><a href="">درباره ما</a></li>
-                                    <li><a href="">قوانین و مقررات</a></li>
-                                    <li><a href="">تماس با ما</a></li>
-                                </ul>
-                            </div>
-                            <div class="footer-widget">
-                                Codingyar.com © | all rights reserved
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Footer End-->
+        {#        <!-- Footer Start-->#}
+        {#        <footer class="footer">#}
+        {#            <div class="footer-top bg-color ptb--50" data-bg-color="#f6f6f6">#}
+        {#                <div class="container">#}
+        {#                    <div class="row justify-content-center">#}
+        {#                        <div class="col-lg-9 text-center">#}
+        {#                            <div class="footer-widget mb--50">#}
+        {#                                <div class="textwidget">#}
+        {#                                    <img src="assets/img/codingyar_logo.png" alt="Logo">#}
+        {#                                </div>#}
+        {#                            </div>#}
+        {#                            <div class="footer-widget mb--50 pb--1">#}
+        {#                                <ul class="footer-menu">#}
+        {#                                    <li><a href="">درباره ما</a></li>#}
+        {#                                    <li><a href="">قوانین و مقررات</a></li>#}
+        {#                                    <li><a href="">تماس با ما</a></li>#}
+        {#                                </ul>#}
+        {#                            </div>#}
+        {#                            <div class="footer-widget">#}
+        {#                                onlineshope.com © | all rights reserved#}
+        {#                            </div>#}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </footer>#}
+        {#        <!-- Footer End-->#}
 
         <!-- Search form Popup Start -->
         <div class="searchform__popup" id="searchForm">
@@ -500,6 +506,33 @@
         <!-- Qicuk View Modal End -->
     </div>
     <!-- Main Wrapper End -->
+    <!-- Footer Start-->
+{#    <footer class="footer">#}
+{#        <div class="footer-top bg-color ptb--50" data-bg-color="#f6f6f6">#}
+{#            <div class="container">#}
+{#                <div class="row justify-content-center">#}
+{#                    <div class="col-lg-9 text-center">#}
+{#                        <div class="footer-widget mb--50">#}
+{#                            <div class="textwidget">#}
+{#                                <img src="assets/img/codingyar_logo.png" alt="Logo">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="footer-widget mb--50 pb--1">#}
+{#                            <ul class="footer-menu">#}
+{#                                <li><a href="">درباره ما</a></li>#}
+{#                                <li><a href="">قوانین و مقررات</a></li>#}
+{#                                <li><a href="">تماس با ما</a></li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                        <div class="footer-widget">#}
+{#                            onlineshope.com © | all rights reserved#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </footer>#}
+{#    <!-- Footer End-->#}
 
 
 {% endblock %}

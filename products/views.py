@@ -7,6 +7,7 @@ from cart.forms import AddToCartProductForm
 
 class ProductListView(generic.ListView):
     #model = Product
+    paginate_by = 12
     queryset = Product.objects.filter(active=True)
     template_name = 'products/product_list.html'
     context_object_name = 'products'

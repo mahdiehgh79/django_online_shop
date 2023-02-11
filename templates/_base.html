@@ -1,6 +1,34 @@
 {% load static %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
+	<style>
+        a{
+            text-decoration: none;
+        }
+		#slides img
+		{
+			display : none;
+			width : 100%;
+			height : 400px;
+			position : relative;
+		}
+
+		#slides .current
+		{
+			display : block;
+			-webkit-animation : a3 2s;
+		}
+
+		@-webkit-keyframes a3 {
+            from {
+                width: 0px;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+	</style>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>{% block page_title %}{% endblock %}</title>
@@ -9,6 +37,24 @@
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="{% static 'js/jQuery.js' %}"></script>
+		<script>
+		$(document).ready(function(){
+			setInterval(function(){
+				if($('.current').next('img').length>0)
+				{
+					$('.current').next('img').addClass('current')
+					$('.current').first().removeClass('current')
+				}
+				else
+				{
+					$("#slides").find("img").first().addClass("current")
+					$('.current').last().removeClass('current')
+				}
+
+			} , 4000)
+		})
+		</script>
     <!-- Favicons -->
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{% static 'img/icon.png' %}">
@@ -49,8 +95,8 @@
                         <div class="site-branding" style="margin-right: 30px;">
                             <a href="{% url 'product_list' %}" class="logo">
                                 <figure class="logo--normal d-none d-sm-block">
-                                    <img class="px-5" src="assets/img/codingyar_logo.png"
-                                         style="max-height: 50px; margin-bottom: -15px;" alt="Logo">
+                                    <img class="px-5" src="{% static 'img/imageslogo 2.png' %}"
+                                         style="max-height: 80px; margin-bottom: -15px;" alt="Logo">
                                 </figure>
                             </a>
                         </div>
@@ -105,19 +151,19 @@
                             <ul class="user-info-menu">
                                 {% if user.is_authenticated %}
                                     <li>
-                                        <a class="text-right" href="{% url 'account_logout' %}">log out</a>
+                                        <a style="text-decoration: none;" class="text-right" href="{% url 'account_logout' %}">log out</a>
                                     </li>
                                 {% else %}
                                     <li>
-                                        <a class="text-right" href="{% url 'account_login' %}">لاگین</a>
+                                        <a style="text-decoration: none; "class="text-right" href="{% url 'account_login' %}">لاگین</a>
                                     </li>
                                     <li>
-                                        <a class="text-right" href="{% url 'account_signup' %}">ثبت نام</a>
+                                        <a style="text-decoration: none; "class="text-right" href="{% url 'account_signup' %}">ثبت نام</a>
                                     </li>
                                 {% endif %}
 
                                 <li>
-                                    <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
+                                    <a style="text-decoration: none; " class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
                                 </li>
                             </ul>
                         </li>
@@ -156,7 +202,7 @@
                 <div class="col-lg-9 text-center">
                     <div class="footer-widget mb--50">
                         <div class="textwidget">
-                            <img src="assets/img/codingyar_logo.png" alt="Logo">
+                            <img src="{% static 'img/imageslogo 2.png' %}" alt="Logo">
                         </div>
                     </div>
                     <div class="footer-widget mb--50 pb--1">

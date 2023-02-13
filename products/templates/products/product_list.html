@@ -81,22 +81,23 @@
 
                                                                 <div class="quantity-wrapper">
 
-                                                                        <input type="hidden" class="quantity-input"
-                                                                               name="quantity" id="qty"
-                                                                               value="30"
-                                                                               min="1">
+                                                                    <input type="hidden" class="quantity-input"
+                                                                           name="quantity" id="qty"
+                                                                           value="30"
+                                                                           min="1">
 
-                                                                    <button style="font-size:15px;font-family: Bkoodak;" type="submit"
+                                                                    <button style="font-size:15px;font-family:Bkoodak;"
+                                                                            type="submit"
                                                                             class="btn btn-small btn-bg-red  btn-color-white btn-hover-2"
                                                                     >
                                                                         اضافه به سبد خرید
                                                                     </button>
                                                                 </div>
                                                             </form>
-                                                                {#                                                                <a style="font-size: 15px; " href="cart.html"#}
-                                                                {#                                                                   class="btn btn-small btn-bg-sand btn-color-dark px-3">اضافه#}
-                                                                {#                                                                    کردن به سبد خرید</a>#}
-                                                         </div>
+                                                            {#                                                                <a style="font-size: 15px; " href="cart.html"#}
+                                                            {#                                                                   class="btn btn-small btn-bg-sand btn-color-dark px-3">اضافه#}
+                                                            {#                                                                    کردن به سبد خرید</a>#}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -109,19 +110,22 @@
                             <nav class="pagination-wrap mt--35 mt-md--25 pb-5">
                                 <ul class="pagination">
                                     {% if page_obj.has_next %}
-                                        <li><a href="?page={{ page_obj.next_page_number }}"
-                                               class="next page-number">next</a>
+                                        <li><a style=" font-family: Bkoodak; text-decoration: none;"
+                                               href="?page={{ page_obj.next_page_number }}"
+                                               class="next page-number"><i class="fa fa-angle-double-right"></i></a>
                                         </li>
                                     {% endif %}
-                                    {% if page_obj.has_perevies %}
-
-                                        <li><a href="?page={{ page_obj.previous_page_number }}"
-                                               class="prev page-number">previous</a>
-                                        </li>
-                                    {% endif %}
-
-
                                     <li><span class="current page-number">{{ page_obj.number }}</span></li>
+
+                                    {% if page_obj.has_previous %}
+
+                                        <li><a style="padding-right: 20px;" href="?page={{ page_obj.previous_page_number }}"
+                                               class="prev page-number"><i class="fa fa-angle-double-left"></i></a>
+                                        </li>
+                                    {% endif %}
+
+
+
                                     {#                                    <li><a href="#" class="page-number">2</a></li>#}
                                     {#                                    <li><a href="#" class="page-number">3</a></li>#}
 

@@ -18,6 +18,58 @@
     {#    <!-- Preloader End -->#}
 
     <!-- Main Wrapper Start -->
+{#    <section style=" background: #f5f6fc;#}
+{#  margin-bottom: 80px;" class="header">#}
+{#        <div style="position: relative;" class="banner">#}
+{#            <div style="margin: 80px 115px;#}
+{#  width: 60%;" class="banner-img">#}
+{#                <img class="bns" style="width: 100%;#}
+{#  margin-bottom: -60px; hover ;#}
+{#  opacity: 1;" src="{% static 'img/farm.jpg' %}" ALIGN="right"/>#}
+{#                <div style=" position: absolute;#}
+{#  left: 50%;#}
+{#  top: 20%;" class="banner-title">#}
+{#                    <h1 style="font-size: 55PX;#}
+{#                    background: rgba(0, 0, 0,0.75);#}
+{#                    color: #FFF;#}
+{#                    line-height: 70px;#}
+{#                    padding: 0,0px,0,10px;">#}
+{#                        داروخانه</h1>#}
+{#                    <h1>دکتر وحدانی</h1>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{#    <section class="fashion-trends">#}
+{#        <div class="container">#}
+{#            <div class="fashion-box">#}
+{#                <div class="title-style text-center">#}
+{#                    <h1>Pharmacy Store</h1>#}
+{#                </div>#}
+{##}
+{#                <p class="text-center">#}
+{#                 داروخانه دکتر وحدانی#}
+{#                </p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+    <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-12">
+                        <div class="title-heading">
+                            <h1 class="fw-bold mt-2 mb-3">داروخانه دکتر وحدانی </h1>
+                            <p class="para-desc text-muted">محصولات بهداشتی و مراقبت از پوست و مو </p>
+
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                        <img style="height: 350px;padding-top: 25px;" src="{% static 'img/pharm.jpg' %}" class="img-fluid d-block mx-auto" alt="کدینگ یار">
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div>
+
+
     <div class="wrapper">
 
         <!-- Main Content Wrapper Start -->
@@ -119,7 +171,8 @@
 
                                     {% if page_obj.has_previous %}
 
-                                        <li><a style="padding-right: 20px;" href="?page={{ page_obj.previous_page_number }}"
+                                        <li><a style="padding-right: 20px;"
+                                               href="?page={{ page_obj.previous_page_number }}"
                                                class="prev page-number"><i class="fa fa-angle-double-left"></i></a>
                                         </li>
                                     {% endif %}
@@ -197,10 +250,10 @@
     <!-- ************************* JS Files ************************* -->
 
     <!-- jQuery JS -->
-    <script src="assets/js/vendor.js"></script>
+    <script src="{% static 'js/vendor.js' %}"></script>
 
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 
 
 
